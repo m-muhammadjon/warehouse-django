@@ -36,7 +36,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-CUSTOM_APPS = ["apps.common", "apps.users"]
+CUSTOM_APPS = ["apps.common", "apps.users", "apps.warehouse"]
 
 THIRD_PARTY_APPS = [
     "rest_framework",
@@ -156,7 +156,6 @@ CACHES = {
         },
     }
 }
-
 
 # CELERY CONFIGURATION
 CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379")
