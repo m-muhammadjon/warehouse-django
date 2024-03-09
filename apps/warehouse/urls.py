@@ -11,4 +11,10 @@ urlpatterns = [
     # order urls
     path("orders/create/", api_endpoints.OrderCreateAPIView.as_view(), name="order-create"),
     path("orders/list/", api_endpoints.OrderListAPIView.as_view(), name="order-list"),
+    path(
+        "orders/product-materials/<int:order_id>/",
+        api_endpoints.OrderProductMaterialListAPIView.as_view(),
+        name="order-product-materials",
+    ),
+    # warehouse batch urls
 ]

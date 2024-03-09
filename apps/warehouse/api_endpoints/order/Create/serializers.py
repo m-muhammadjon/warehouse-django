@@ -32,4 +32,5 @@ class OrderCreateSerializer(serializers.ModelSerializer):
         order = Order.objects.create(**validated_data)
         for order_item_data in order_items_data:
             OrderItem.objects.create(order=order, **order_item_data)
+        order.calculate_materials()
         return order
