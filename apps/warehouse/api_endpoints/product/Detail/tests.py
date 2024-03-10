@@ -25,7 +25,7 @@ class ProductDetailAPITest(APITestCase):
         self.assertEqual(response.json()["code"], self.product.code)
         self.assertEqual(len(response.json()["raw_materials"]), 2)
         self.assertEqual(response.json()["raw_materials"][0]["raw_material"]["name"], self.raw_material_1.name)
-        self.assertEqual(response.json()["raw_materials"][0]["quantity"], "4.00")
+        self.assertEqual(response.json()["raw_materials"][0]["quantity"], 4.0)
         self.assertEqual(response.json()["raw_materials"][0]["unit"], "m")
 
     def test_get_invalid_product_detail(self):

@@ -133,25 +133,25 @@ class OrderProductMaterialsTest(APITestCase):
         self.assertEqual(
             response.json()["results"][0]["product_materials"][0]["material_name"], self.raw_material_1.name
         )
-        self.assertEqual(response.json()["results"][0]["product_materials"][0]["quantity"], "25.00")
+        self.assertEqual(response.json()["results"][0]["product_materials"][0]["quantity"], 25.0)
         self.assertEqual(response.json()["results"][0]["product_materials"][0]["warehouse_batch"], 1)
         self.assertEqual(response.json()["results"][0]["product_materials"][0]["price"], 1200.0)
         self.assertEqual(
             response.json()["results"][0]["product_materials"][1]["material_name"], self.raw_material_2.name
         )
-        self.assertEqual(response.json()["results"][0]["product_materials"][1]["quantity"], "20.00")
+        self.assertEqual(response.json()["results"][0]["product_materials"][1]["quantity"], 20.0)
         self.assertEqual(response.json()["results"][0]["product_materials"][1]["warehouse_batch"], 3)
         self.assertEqual(response.json()["results"][0]["product_materials"][1]["price"], 1700.0)
         self.assertEqual(
             response.json()["results"][0]["product_materials"][2]["material_name"], self.raw_material_2.name
         )
-        self.assertEqual(response.json()["results"][0]["product_materials"][2]["quantity"], "30.00")
+        self.assertEqual(response.json()["results"][0]["product_materials"][2]["quantity"], 30.0)
         self.assertEqual(response.json()["results"][0]["product_materials"][2]["warehouse_batch"], 4)
         self.assertEqual(response.json()["results"][0]["product_materials"][2]["price"], 2500.0)
         self.assertEqual(
             response.json()["results"][0]["product_materials"][3]["material_name"], self.raw_material_3.name
         )
-        self.assertEqual(response.json()["results"][0]["product_materials"][3]["quantity"], "15.00")
+        self.assertEqual(response.json()["results"][0]["product_materials"][3]["quantity"], 15.0)
         self.assertEqual(response.json()["results"][0]["product_materials"][3]["warehouse_batch"], 5)
         self.assertEqual(response.json()["results"][0]["product_materials"][3]["price"], 3200.0)
         # Check raw materials for product 2
@@ -160,25 +160,25 @@ class OrderProductMaterialsTest(APITestCase):
         self.assertEqual(
             response.json()["results"][1]["product_materials"][0]["material_name"], self.raw_material_2.name
         )
-        self.assertEqual(response.json()["results"][1]["product_materials"][0]["quantity"], "10.00")
+        self.assertEqual(response.json()["results"][1]["product_materials"][0]["quantity"], 10.0)
         self.assertEqual(response.json()["results"][1]["product_materials"][0]["warehouse_batch"], 4)
         self.assertEqual(response.json()["results"][1]["product_materials"][0]["price"], 2500.0)
         self.assertEqual(
             response.json()["results"][1]["product_materials"][1]["material_name"], self.raw_material_2.name
         )
-        self.assertEqual(response.json()["results"][1]["product_materials"][1]["quantity"], "60.00")
+        self.assertEqual(response.json()["results"][1]["product_materials"][1]["quantity"], 60.0)
         self.assertEqual(response.json()["results"][1]["product_materials"][1]["warehouse_batch"], None)
         self.assertEqual(response.json()["results"][1]["product_materials"][1]["price"], None)
         self.assertEqual(
             response.json()["results"][1]["product_materials"][2]["material_name"], self.raw_material_3.name
         )
-        self.assertEqual(response.json()["results"][1]["product_materials"][2]["quantity"], "10.00")
+        self.assertEqual(response.json()["results"][1]["product_materials"][2]["quantity"], 10.0)
         self.assertEqual(response.json()["results"][1]["product_materials"][2]["warehouse_batch"], 5)
         self.assertEqual(response.json()["results"][1]["product_materials"][2]["price"], 3200.0)
         self.assertEqual(
             response.json()["results"][1]["product_materials"][3]["material_name"], self.raw_material_3.name
         )
-        self.assertEqual(response.json()["results"][1]["product_materials"][3]["quantity"], "10.00")
+        self.assertEqual(response.json()["results"][1]["product_materials"][3]["quantity"], 10.0)
         self.assertEqual(response.json()["results"][1]["product_materials"][3]["warehouse_batch"], None)
         self.assertEqual(response.json()["results"][1]["product_materials"][3]["price"], None)
         # Check warehouse batch remainders are not changed
