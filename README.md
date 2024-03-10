@@ -49,9 +49,15 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Pre-commit hook
+### Pre-commit hook
 
 ```bash
 pip install pre-commit
 pre-commit install
+```
+
+### Run tests
+
+```bash
+python manage.py test
 ```
